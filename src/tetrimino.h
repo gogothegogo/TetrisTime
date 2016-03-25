@@ -1,5 +1,6 @@
 #define TETRIMINO_COUNT 7  
 #define TETRIMINO_MASK_SIZE 4
+#define MYCOLOR GColorWhite
 
 typedef uint8_t TetriminoMask[TETRIMINO_MASK_SIZE][TETRIMINO_MASK_SIZE];
 
@@ -8,7 +9,7 @@ typedef uint8_t TetriminoMask[TETRIMINO_MASK_SIZE][TETRIMINO_MASK_SIZE];
 #define COLOR_TO_BYTE(basalt, aplite) (basalt ## ARGB8)
 #define BYTE_TO_COLOR(val) ( (GColor) { .argb = (val) } )
 #else
-#define COLOR_TO_BYTE(basalt, aplite) (aplite)
+#define COLOR_TO_BYTE(basalt, aplite) (aplite ## ARGB8)
 #define BYTE_TO_COLOR(val) (val)
 #endif
 
