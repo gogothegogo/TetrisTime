@@ -183,7 +183,7 @@ static bool settings_apply(const int* new_settings) {
     }
 
     if (!s_settings[CUSTOM_ANIMATIONS]) {
-        s_settings[CUSTOM_ANIMATION_TIMEOUT_MS] = 100;
+        s_settings[CUSTOM_ANIMATION_TIMEOUT_MS] = 90;
         s_settings[CUSTOM_ANIMATION_PERIOD_VIS_FRAMES] = 2;
         s_settings[CUSTOM_ANIMATION_PERIOD_INVIS_FRAMES] = 1;
         s_settings[CUSTOM_ANIMATION_PERIOD_COUNT] = 3;

@@ -372,13 +372,16 @@ static void layer_draw(Layer* layer, GContext* ctx) {
             draw_bitmap(&s_bluetooth, 0, 0, s_fg_color);
         }
     }
+  //battery icon!
     if (s_settings[ICON_BATTERY]) {
         const Bitmap* bmp = NULL;
         BatteryChargeState charge_state = battery_state_service_peek();
         if (charge_state.is_charging) {
             bmp = &s_battery_charging;
-        } else if (charge_state.charge_percent <= 20) {
+        } else if (charge_state.charge_percent <= 10) {
             bmp = &s_battery_empty;
+        } else if (charge_state.charge_percent <= 20) {
+            bmp = &s_battery_halfempty;
         }
         if (bmp) {
             draw_bitmap(bmp, FIELD_WIDTH - bmp->width, 0, s_fg_color);

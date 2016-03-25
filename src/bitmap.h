@@ -670,11 +670,19 @@ static const Bitmap s_bluetooth = {
     "  # "
 };
 
+static const Bitmap s_battery_halfempty = {
+    6, 4,
+    "      "
+    "####  "
+    "##  # "
+    "####  "
+};
+
 static const Bitmap s_battery_empty = {
     6, 4,
     "      "
     "####  "
-    "#  ## "
+    "#   # "
     "####  "
 };
 
