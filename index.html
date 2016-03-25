@@ -90,7 +90,7 @@
         -->
         <fieldset data-role="controlgroup">
           <legend><h3>Animation settings</h3></legend>
-          <input id="ANIMATE_SECOND_DOT" type="checkbox" checked="checked">
+          <input id="ANIMATE_SECOND_DOT" type="checkbox">
           <label for="ANIMATE_SECOND_DOT">Animate seconds colon</label>
           <input id="SKIP_INITIAL_ANIMATION" type="checkbox">
           <label for="SKIP_INITIAL_ANIMATION">Skip initial animation</label>
@@ -99,18 +99,18 @@
         </fieldset>
         <fieldset data-role="controlgroup">
           <legend><h3>Date mode</h3></legend>
-          <input name="DATE_MODE" id="DATE_MODE_0" value="0" checked="checked" type="radio">
+          <input name="DATE_MODE" id="DATE_MODE_0" value="0" type="radio">
           <label for="DATE_MODE_0">Inverted date</label>
-          <input name="DATE_MODE" id="DATE_MODE_1" value="1" type="radio">
+          <input name="DATE_MODE" id="DATE_MODE_1" value="1" checked="checked" type="radio">
           <label for="DATE_MODE_1">Same color date</label>
           <input name="DATE_MODE" id="DATE_MODE_2" value="2" type="radio">
           <label for="DATE_MODE_2">No date</label>
         </fieldset>
         <fieldset data-role="controlgroup">
           <legend><h3>Date first line format</h3></legend>
-          <input name="DATE_MONTH_FORMAT" id="DATE_MONTH_FORMAT_0" value="0" checked="checked" type="radio">
+          <input name="DATE_MONTH_FORMAT" id="DATE_MONTH_FORMAT_0" value="0" type="radio">
           <label for="DATE_MONTH_FORMAT_0">Month and date</label>
-          <input name="DATE_MONTH_FORMAT" id="DATE_MONTH_FORMAT_1" value="1" type="radio">
+          <input name="DATE_MONTH_FORMAT" id="DATE_MONTH_FORMAT_1" value="1" checked="checked" type="radio">
           <label for="DATE_MONTH_FORMAT_1">Date and month</label>
           <input name="DATE_MONTH_FORMAT" id="DATE_MONTH_FORMAT_2" value="2" type="radio">
           <label for="DATE_MONTH_FORMAT_2">Weekday and date</label>
@@ -130,16 +130,16 @@
         </fieldset>
         <fieldset data-role="controlgroup" data-type="horizontal">
           <legend><h3>First weekday</h3></legend>
-          <input name="DATE_FIRST_WEEKDAY" id="DATE_FIRST_WEEKDAY_0" value="0" checked="checked" type="radio">
+          <input name="DATE_FIRST_WEEKDAY" id="DATE_FIRST_WEEKDAY_0" value="0" type="radio">
           <label for="DATE_FIRST_WEEKDAY_0">Sunday first</label>
-          <input name="DATE_FIRST_WEEKDAY" id="DATE_FIRST_WEEKDAY_1" value="1" type="radio">
+          <input name="DATE_FIRST_WEEKDAY" id="DATE_FIRST_WEEKDAY_1" value="1" checked="checked" type="radio">
           <label for="DATE_FIRST_WEEKDAY_1">Monday first</label>
         </fieldset>
         <fieldset data-role="controlgroup">
           <legend><h3>Icons</h3></legend>
-          <input id="ICON_CONNECTION" type="checkbox">
+          <input id="ICON_CONNECTION" type="checkbox" checked="checked">
           <label for="ICON_CONNECTION">Show bluetooth icon when there is no connection</label>
-          <input id="ICON_BATTERY" type="checkbox">
+          <input id="ICON_BATTERY" type="checkbox" checked="checked">
           <label for="ICON_BATTERY">Show battery icon when battery is low or charging</label>
         </fieldset>
         <fieldset data-role="controlgroup" data-type="vertical">
@@ -155,13 +155,13 @@
         </fieldset>
         <fieldset data-role="controlgroup" data-type="vertical">
           <legend><h3>Reconnection notification vibration</h3></legend>
-          <input name="NOTIFICATION_CONNECTED" id="NOTIFICATION_CONNECTED_0" value="0" checked="checked" type="radio">
+          <input name="NOTIFICATION_CONNECTED" id="NOTIFICATION_CONNECTED_0" value="0" type="radio">
           <label for="NOTIFICATION_CONNECTED_0">None</label>
           <input name="NOTIFICATION_CONNECTED" id="NOTIFICATION_CONNECTED_1" value="1" type="radio">
           <label for="NOTIFICATION_CONNECTED_1">Short</label>
           <input name="NOTIFICATION_CONNECTED" id="NOTIFICATION_CONNECTED_2" value="2" type="radio">
           <label for="NOTIFICATION_CONNECTED_2">Long</label>
-          <input name="NOTIFICATION_CONNECTED" id="NOTIFICATION_CONNECTED_3" value="3" type="radio">
+          <input name="NOTIFICATION_CONNECTED" id="NOTIFICATION_CONNECTED_3" value="3" checked="checked" type="radio">
           <label for="NOTIFICATION_CONNECTED_3">Double</label>
         </fieldset>
         <fieldset id="dest" data-role="controlgroup" data-type="vertical">
@@ -185,19 +185,19 @@
         </fieldset>
         <fieldset data-role="controlgroup" class="custom_date">
           <label for="CUSTOM_TIME_OFFSET">Vertical time offset:</label>
-          <input id="CUSTOM_TIME_OFFSET" type="text" size="1" value="2">
+          <input id="CUSTOM_TIME_OFFSET" type="text" size="1" value="4">
           <label for="CUSTOM_TIME_DATE_SPACING_1">Spacing between time and date/time split</label>
           <input id="CUSTOM_TIME_DATE_SPACING_1" type="text" size="1" value="2">
           <label for="CUSTOM_TIME_DATE_SPACING_2">Spacing between date and date/time split</label>
-          <input id="CUSTOM_TIME_DATE_SPACING_2" type="text" size="1" value="2">
+          <input id="CUSTOM_TIME_DATE_SPACING_2" type="text" size="1" value="4">
           <label for="CUSTOM_DATE_WORD_SPACING">Date word spacing</label>
-          <input id="CUSTOM_DATE_WORD_SPACING" type="text" size="1" value="3">
+          <input id="CUSTOM_DATE_WORD_SPACING" type="text" size="1" value="2">
           <label for="CUSTOM_DATE_LINE_SPACING">Date line spacing</label>
           <input id="CUSTOM_DATE_LINE_SPACING" type="text" size="1" value="2">
         </fieldset>
         <fieldset data-role="controlgroup" class="custom_animations">
           <label for="CUSTOM_ANIMATION_TIMEOUT_MS">Animation timeout in ms:</label>
-          <input id="CUSTOM_ANIMATION_TIMEOUT_MS" type="text" size="4" value="100">
+          <input id="CUSTOM_ANIMATION_TIMEOUT_MS" type="text" size="4" value="90">
           <label for="CUSTOM_ANIMATION_PERIOD_VIS_FRAMES">Vanishing animation inivisble frames:</label>
           <input id="CUSTOM_ANIMATION_PERIOD_VIS_FRAMES" type="text" size="2" value="2">
           <label for="CUSTOM_ANIMATION_PERIOD_INVIS_FRAMES">Vanishing animation visible frames:</label>
