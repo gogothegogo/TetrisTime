@@ -157,13 +157,17 @@ static void state_step(DigitState* state) {
 }
 
 static void draw_weekday_line(int height, GColor color) {
-    const Bitmap* weekdays = s_settings[LARGE_DATE_FONT] ? s_large_weekdays : s_small_weekdays;
+  //here is date font switch gogo  
+  //const Bitmap* weekdays = s_settings[LARGE_DATE_FONT] ? s_large_weekdays : s_small_weekdays;
+  const Bitmap* weekdays = s_small_weekdays;
     const Bitmap* bmp = &weekdays[s_weekday];
     draw_bitmap(bmp, (FIELD_WIDTH - bmp->width + 1) / 2, height, color);
 }
 
 static void draw_marked_weekday_line(int height, GColor color, bool use_letter) {
-    const Bitmap* marked_weekdays = s_settings[LARGE_DATE_FONT] ? s_large_marked_weekdays : s_small_marked_weekdays;
+  //marked weekdays font switch gogo
+    //const Bitmap* marked_weekdays = s_settings[LARGE_DATE_FONT] ? s_large_marked_weekdays : s_small_marked_weekdays;
+  const Bitmap* marked_weekdays = s_small_marked_weekdays;
     
     const int first_weekday = s_settings[DATE_FIRST_WEEKDAY];
     int width = 0;
@@ -182,12 +186,18 @@ static void draw_marked_weekday_line(int height, GColor color, bool use_letter) 
 
 static void draw_date_line(int height, GColor color) {
     const DateMonthFormat dmf = s_settings[DATE_MONTH_FORMAT];
-
-    const Bitmap* months = s_settings[LARGE_DATE_FONT] ? s_large_months : s_small_months;
+    //various font switch gogo
+    /*const Bitmap* months = s_settings[LARGE_DATE_FONT] ? s_large_months : s_small_months;
     const Bitmap* weekdays = s_settings[LARGE_DATE_FONT] ? s_large_weekdays : s_small_weekdays;
     const Bitmap* bmp_digits = s_settings[LARGE_DATE_FONT] ? s_bmp_large_digits : s_bmp_small_digits;
-    const int bmp_digit_width = s_settings[LARGE_DATE_FONT] ? BMP_LARGE_DIGIT_WIDTH : BMP_SMALL_DIGIT_WIDTH;
+    const int bmp_digit_width = s_settings[LARGE_DATE_FONT] ? BMP_LARGE_DIGIT_WIDTH : BMP_SMALL_DIGIT_WIDTH;*/
     
+    const Bitmap* months = s_small_months;
+    const Bitmap* weekdays = s_small_weekdays;
+    const Bitmap* bmp_digits = s_bmp_small_digits;
+    const int bmp_digit_width = BMP_SMALL_DIGIT_WIDTH;
+  
+  
     // digit
     int width = bmp_digit_width;
     if (s_day >= 10) {
@@ -258,7 +268,7 @@ static void draw_date() {
         date_color = s_fg_color;
     }
 
-    const int bmp_height = s_settings[LARGE_DATE_FONT] ? BMP_LARGE_HEIGHT : BMP_SMALL_HEIGHT;
+    const int bmp_height = BMP_SMALL_HEIGHT;
     const int first_line_height = split_height + s_settings[CUSTOM_TIME_DATE_SPACING_2];
     const int second_line_height = first_line_height + bmp_height + s_settings[CUSTOM_DATE_LINE_SPACING];
     const DateWeekdayFormat dwf = s_settings[DATE_WEEKDAY_FORMAT];
