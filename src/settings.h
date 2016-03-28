@@ -90,7 +90,7 @@ static Settings s_settings;
 inline static int settings_get_default(SettingsKey key) {
     switch (key) {
     case ANIMATE_SECOND_DOT:
-        return 1;
+        return 0;
     case DATE_WEEKDAY_FORMAT:
         return DWF_TEXT;
     case NOTIFICATION_DISCONNECTED:
