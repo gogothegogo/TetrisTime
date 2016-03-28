@@ -128,12 +128,12 @@ static const Bitmap s_cro_months[] = {
         " #  ### ###"
     },
     {
-        12, BMP_SMALL_HEIGHT,
-        "###  ##  # #"
-        "# # #### # #"
-        "# #   #  # #"
-        "# #  #   # #"
-        "### #### ###"
+        11, BMP_SMALL_HEIGHT,
+        "### ##  # #"
+        "# # ### # #"
+        "# #  #  # #"
+        "# # #   # #"
+        "### ### ###"
     },
     {
         11, BMP_SMALL_HEIGHT,
@@ -498,7 +498,7 @@ static const Bitmap s_cro_weekdays[] = {
         "#  # ### ## "
     },
     {
-        14, BMP_SMALL_HEIGHT,
+        12, BMP_SMALL_HEIGHT,
         "### ### #  #"
         "# # # # ## #"
         "### # # # ##"

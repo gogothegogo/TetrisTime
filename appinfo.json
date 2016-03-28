@@ -1,6 +1,7 @@
 {
     "appKeys": {
         "ANIMATE_SECOND_DOT": 2,
+        "CRO_DATE_FONT": 14,
         "CUSTOM_ANIMATIONS": 21,
         "CUSTOM_ANIMATION_DATE_PERIOD_FRAMES": 26,
         "CUSTOM_ANIMATION_PERIOD_COUNT": 25,
@@ -20,7 +21,6 @@
         "DATE_WEEKDAY_FORMAT": 6,
         "ICON_BATTERY": 9,
         "ICON_CONNECTION": 8,
-        "LARGE_DATE_FONT": 14,
         "LIGHT_THEME": 1,
         "NOTIFICATION_CONNECTED": 11,
         "NOTIFICATION_DISCONNECTED": 10,
