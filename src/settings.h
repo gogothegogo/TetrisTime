@@ -23,7 +23,7 @@ typedef enum {
     SKIP_INITIAL_ANIMATION,
     NOTIFICATION_HOURLY,
 
-    LARGE_DATE_FONT,
+    CRO_DATE_FONT,
 
     CUSTOM_DATE,
     CUSTOM_TIME_OFFSET,
@@ -132,7 +132,7 @@ static bool settings_apply(const int* new_settings) {
     s_settings[NOTIFICATION_CONNECTED] %= NTF_MAX;
     s_settings[SKIP_INITIAL_ANIMATION] %= 2;
     s_settings[NOTIFICATION_HOURLY] %= NTF_MAX;
-    s_settings[LARGE_DATE_FONT] %= 2;
+    s_settings[CRO_DATE_FONT] %= 2;
     s_settings[CUSTOM_DATE] %= 2;
     s_settings[CUSTOM_ANIMATIONS] %= 2;
 
@@ -147,16 +147,16 @@ static bool settings_apply(const int* new_settings) {
     // fix custom values
     if (!s_settings[CUSTOM_DATE]) {
         if (s_settings[DATE_MODE] != DM_NONE) {
-            const int large_font = s_settings[LARGE_DATE_FONT];
+            //const int large_font = s_settings[LARGE_DATE_FONT];
             switch (s_settings[DATE_WEEKDAY_FORMAT]) {
             case DWF_MARKED:
-                s_settings[CUSTOM_TIME_OFFSET] = large_font ? 2 : 1;
+                s_settings[CUSTOM_TIME_OFFSET] = 1;
                 break;
             case DWF_LETTER:
-                s_settings[CUSTOM_TIME_OFFSET] = large_font ? 3 : 2;
+                s_settings[CUSTOM_TIME_OFFSET] = 2;
                 break;
             case DWF_TEXT:
-                s_settings[CUSTOM_TIME_OFFSET] = large_font ? 4 : 2;
+                s_settings[CUSTOM_TIME_OFFSET] = 2;
                 break;
             default:
             case DWF_NO_WEEKDAY:
