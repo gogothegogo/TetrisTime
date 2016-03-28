@@ -89,10 +89,14 @@ static Settings s_settings;
 
 inline static int settings_get_default(SettingsKey key) {
     switch (key) {
-    case ANIMATE_SECOND_DOT:
-        return 0;
     case DATE_WEEKDAY_FORMAT:
         return DWF_TEXT;
+    case DATE_MODE:
+        return DM_SAME_COLOR;
+    case DATE_FIRST_WEEKDAY:
+        return 1;
+    case NOTIFICATION_CONNECTED:
+        return NTF_DOUBLE_PULSE;
     case NOTIFICATION_DISCONNECTED:
         return NTF_DOUBLE_PULSE;
     default:
@@ -156,7 +160,7 @@ static bool settings_apply(const int* new_settings) {
                 s_settings[CUSTOM_TIME_OFFSET] = 2;
                 break;
             case DWF_TEXT:
-                s_settings[CUSTOM_TIME_OFFSET] = 2;
+                s_settings[CUSTOM_TIME_OFFSET] = 4;
                 break;
             default:
             case DWF_NO_WEEKDAY:
@@ -167,8 +171,8 @@ static bool settings_apply(const int* new_settings) {
             s_settings[CUSTOM_TIME_OFFSET] = 0;
         }
         s_settings[CUSTOM_TIME_DATE_SPACING_1] = 2;
-        s_settings[CUSTOM_TIME_DATE_SPACING_2] = 2;
-        s_settings[CUSTOM_DATE_WORD_SPACING] = 3;
+        s_settings[CUSTOM_TIME_DATE_SPACING_2] = 4;
+        s_settings[CUSTOM_DATE_WORD_SPACING] = 2;
         s_settings[CUSTOM_DATE_LINE_SPACING] = 2;
         if (s_settings[DATE_WEEKDAY_FORMAT] == DWF_NO_WEEKDAY) {
             s_settings[CUSTOM_TIME_DATE_SPACING_1] += 1;

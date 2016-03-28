@@ -20,8 +20,6 @@ Pebble.addEventListener("appmessage",
 
 Pebble.addEventListener("showConfiguration",
     function(e) {
-        //var url = 'https://www.googledrive.com/host/0B1O5Onb__DjSRHJZeURzeW96dG8';
-        // debug url
          var url = 'http://gogothegogo.github.io/TetrisTime/';
         var options = window.localStorage.getItem("options");
         if (options !== null) {
