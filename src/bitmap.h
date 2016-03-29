@@ -3,6 +3,7 @@
 
 #define BMP_SMALL_HEIGHT 5
 #define BMP_SMALL_DIGIT_WIDTH 3
+#define BMP_SUPERSMALL_DIGIT_WIDTH 2
 
 typedef struct {
     uint8_t width;
@@ -116,7 +117,7 @@ static const Bitmap s_cro_months[] = {
         "    #  #"
         " ##     "
         "#   #  #"
-        "### #  #"
+        " #  #  #"
         "  # #  #"
         "##  # # "
     },
@@ -152,7 +153,7 @@ static const Bitmap s_cro_months[] = {
         "        #"
         " ##      "
         "#   # # #"
-        "### # # #"
+        " #  # # #"
         "  # # # #"
         "##   #  #"
     },
@@ -170,7 +171,7 @@ static const Bitmap s_cro_months[] = {
         "           "
         " ##        "
         "#   ##  ## "
-        "### # # # #"
+        " #  # # # #"
         "  # ##  ## "
         "##  # # #  "
     },
@@ -204,9 +205,9 @@ static const Bitmap s_cro_months[] = {
     {
         11, BMP_LARGE_HEIGHT,
         "           "
-        " ##        "
+        " ##  #     "
         "#   ### # #"
-        "###  #  # #"
+        " #   #  # #"
         "  #  #  # #"
         "##   #   ##"
     },
@@ -225,83 +226,83 @@ STATIC_ASSERT(ARRAY_SIZE(s_cro_months) == 12);
 static const Bitmap s_bmp_small_digits[] = {
     {
         BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
+        " # "
         "# #"
         "# #"
         "# #"
-        "###"
+        " # "
      },
     {
+        BMP_SUPERSMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        " #"
+        "##"
+        " #"
+        " #"
+        " #"
+    },
+    {
         BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        "## "
         "  #"
+        " # "
+        "#  "
+        "###"
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        "## "
+        "  #"
+        " # "
+        "  #"
+        "## "
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        "# #"
+        "# #"
+        "###"
+        "  #"
+        "  #"
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        "###"
+        "#  "
+        "## "
+        "  #"
+        "## "
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        " ##"
+        "#  "
+        "## "
+        "# #"
+        " # "
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        "###"
+        "  #"
+        " # "
+        " # "
+        " # "
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        " # "
+        "# #"
+        " # "
+        "# #"
+        " # "
+    },
+    {
+        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
+        " # "
+        "# #"
         " ##"
         "  #"
-        "  #"
-        "  #"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "  #"
-        "###"
-        "#  "
-        "###"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "  #"
-        " ##"
-        "  #"
-        "###"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "# #"
-        "# #"
-        "###"
-        "  #"
-        "  #"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "#  "
-        "###"
-        "  #"
-        "###"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "#  "
-        "###"
-        "# #"
-        "###"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "  #"
-        "  #"
-        "  #"
-        "  #"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "# #"
-        "###"
-        "# #"
-        "###"
-    },
-    {
-        BMP_SMALL_DIGIT_WIDTH, BMP_SMALL_HEIGHT,
-        "###"
-        "# #"
-        "###"
-        "  #"
-        "###"
+        "## "
     },
 };
 STATIC_ASSERT(ARRAY_SIZE(s_bmp_small_digits) == 10);
