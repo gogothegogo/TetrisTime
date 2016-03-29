@@ -118,8 +118,9 @@ static void reorder_digit(DigitDef* dst, const DigitDef* src) {
     }
 }
 
+/*
 #if USE_RAW_DIGITS == 1
-  
+
 static RawDigit s_raw_digits[] = {
     {"tzzjjj",
      "ttzzsj",
@@ -350,8 +351,10 @@ static void format_digit_def_struct(const DigitDef* def) {
 
 static DigitDef s_digits[DIGIT_COUNT+1];
 
-#else
 
+
+#else
+*/
 static DigitDef s_digits[] = {
     { 12,
       {
@@ -506,5 +509,5 @@ static DigitDef s_digits[] = {
 };
 STATIC_ASSERT(ARRAY_SIZE(s_digits) == (DIGIT_COUNT+1));
 
-#endif
+// #endif
 

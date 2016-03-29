@@ -112,100 +112,112 @@ STATIC_ASSERT(ARRAY_SIZE(s_small_months) == 12);
 
 static const Bitmap s_cro_months[] = {
     {
-        11, BMP_SMALL_HEIGHT,
-        "###  #    #"
-        "#    #    #"
-        "###  #    #"
-        "  #  #  # #"
-        "###  #  ###"
+        8, BMP_LARGE_HEIGHT,
+        "    #  #"
+        " ##     "
+        "#   #  #"
+        "### #  #"
+        "  # #  #"
+        "##  # # "
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "# # ### #  "
-        "# # #   #  "
-        "# # ##  #  "
-        "# # #   #  "
-        " #  ### ###"
+        9, BMP_LARGE_HEIGHT,
+        "        #"
+        "# #      "
+        "# # #   #"
+        "# # #   #"
+        "# # #   #"
+        " #  ## # "
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### ##  # #"
-        "# # ### # #"
-        "# #  #  # #"
-        "# # #   # #"
-        "### ### ###"
+        10, BMP_LARGE_HEIGHT,
+        "    ##    "
+        " ##       "
+        "# # ## # #"
+        "# #  # # #"
+        "# # #  # #"
+        "### ##  ##"
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### ### ###"
+        11, BMP_LARGE_HEIGHT,
+        "           "
+        "###        "
+        " #  ##   ##"
         " #  # # # #"
         " #  ##  ###"
         " #  # # # #"
-        " #  # # # #"
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### # #  # "
-        "#   # #  # "
-        "### # #  # "
-        "  # # #  # "
-        "###  #   # "
+        9, BMP_LARGE_HEIGHT,
+        "        #"
+        " ##      "
+        "#   # # #"
+        "### # # #"
+        "  # # # #"
+        "##   #  #"
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "#    #  ###"
-        "#    #  # #"
-        "#    #  ###"
-        "#    #  #  "
-        "###  #  #  "
+        8, BMP_LARGE_HEIGHT,
+        "   #    "
+        "#       "
+        "#  # ## "
+        "#  # # #"
+        "#  # ## "
+        "## # #  "
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### ### ###"
-        "#   # # # #"
-        "### ##  ###"
-        "  # # # #  "
-        "### # # #  "
-    },
-    {
-        11, BMP_SMALL_HEIGHT,
-        "# # ### #  "
-        "# # # # #  "
+        11, BMP_LARGE_HEIGHT,
+        "           "
+        " ##        "
+        "#   ##  ## "
+        "### # # # #"
+        "  # ##  ## "
         "##  # # #  "
-        "# # # # #  "
-        "# # ### ###"
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### # #   #"
-        "# # # #   #"
-        "##  # #   #"
-        "# # # # # #"
-        "# # ### ###"
+        10, BMP_LARGE_HEIGHT,
+        "          "
+        "# #       "
+        "# #  ## # "
+        "##  # # # "
+        "# # # # # "
+        "# # ##  ##"
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "#    #  ###"
-        "#    #  #  "
-        "#    #  ###"
-        "#    #    #"
-        "###  #  ###"
+        10, BMP_LARGE_HEIGHT,
+        "         #"
+        "##        "
+        "# # # #  #"
+        "##  # #  #"
+        "# # # #  #"
+        "# #  ## # "
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### ### # #"
-        "#    #  # #"
+        7, BMP_LARGE_HEIGHT,
+        "   #   "
+        "#      "
+        "#  #  #"
+        "#  # # "
+        "#  #  #"
+        "## # # "
+    },
+    {
+        11, BMP_LARGE_HEIGHT,
+        "           "
+        " ##        "
+        "#   ### # #"
         "###  #  # #"
         "  #  #  # #"
-        "###  #  ###"
+        "##   #   ##"
     },
     {
-        11, BMP_SMALL_HEIGHT,
-        "### ### ###"
-        "# # # # # #"
-        "### ##  # #"
-        "#   # # # #"
-        "#   # # ###"
+        11, BMP_LARGE_HEIGHT,
+        "           "
+        "##         "
+        "# # ##   ##"
+        "##  # # # #"
+        "#   ##  # #"
+        "#   # # ## "
     },
 };
 STATIC_ASSERT(ARRAY_SIZE(s_cro_months) == 12);
@@ -515,11 +527,11 @@ static const Bitmap s_cro_weekdays[] = {
     },
     {
         11, BMP_SMALL_HEIGHT,
-        "### ### ###"
+        "### ###  # "
         "#   # #  # "
         "### ##   # "
         "  # # #  # "
-        "### # # ###"
+        "### # #  # "
     },
     {
         11, BMP_SMALL_HEIGHT,
@@ -610,15 +622,15 @@ static void bitmap_check(const Bitmap* bmp, const char* label) {
 static void bitmap_check_all() {
     APP_LOG(APP_LOG_LEVEL_INFO, "Bitmap check");
     BITMAP_CHECK_ARRAY(s_small_months);
-    //BITMAP_CHECK_ARRAY(s_large_months);
+    BITMAP_CHECK_ARRAY(s_cro_months);
     BITMAP_CHECK_ARRAY(s_bmp_small_digits);
-    //BITMAP_CHECK_ARRAY(s_bmp_large_digits);
     BITMAP_CHECK_ARRAY(s_small_marked_weekdays);
-    //BITMAP_CHECK_ARRAY(s_large_marked_weekdays);
+    BITMAP_CHECK_ARRAY(s_cro_marked_weekdays);
     BITMAP_CHECK_ARRAY(s_small_weekdays);
-    //BITMAP_CHECK_ARRAY(s_large_weekdays);
+    BITMAP_CHECK_ARRAY(s_cro_weekdays);
     bitmap_check(&s_bluetooth, "bt");
     bitmap_check(&s_battery_empty, "bat_emp");
+    bitmap_check(&s_battery_halfempty, "bat_hlfemp");
     bitmap_check(&s_battery_charging, "bat_char");
     APP_LOG(APP_LOG_LEVEL_INFO, "Bitmap done");
 }

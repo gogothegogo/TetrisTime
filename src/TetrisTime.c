@@ -189,8 +189,7 @@ static void draw_date_line(int height, GColor color) {
     //various font switch gogo
     const Bitmap* months = s_settings[CRO_DATE_FONT] ? s_cro_months : s_small_months;
     const Bitmap* weekdays = s_settings[CRO_DATE_FONT] ? s_cro_weekdays : s_small_weekdays;
-    //const Bitmap* bmp_digits = s_settings[LARGE_DATE_FONT] ? s_bmp_large_digits : s_bmp_small_digits;
-    //const int bmp_digit_width = s_settings[LARGE_DATE_FONT] ? BMP_LARGE_DIGIT_WIDTH : BMP_SMALL_DIGIT_WIDTH;
+    int extra_height = s_settings[CRO_DATE_FONT] ? 1 : 0; //for croatian taller months (because of ž)
     
     //const Bitmap* months = s_small_months;
     //const Bitmap* weekdays = s_small_weekdays;
@@ -224,7 +223,7 @@ static void draw_date_line(int height, GColor color) {
     
     // month before
     if (dmf == DMF_MONTH_BEFORE) {
-        draw_bitmap_move(&offset, &months[s_month], height, color, date_word_spacing);
+        draw_bitmap_move(&offset, &months[s_month], height-extra_height, color, date_word_spacing);
     } else if (dmf == DMF_WEEKDAY_BEFORE) {
         draw_bitmap_move(&offset, &weekdays[s_weekday], height, color, date_word_spacing);
     }
@@ -237,7 +236,7 @@ static void draw_date_line(int height, GColor color) {
 
     // month after
     if (dmf == DMF_MONTH_AFTER) {
-        draw_bitmap_move(&offset, &months[s_month], height, color, date_word_spacing);
+        draw_bitmap_move(&offset, &months[s_month], height-extra_height, color, date_word_spacing);
     } else if (dmf == DMF_WEEKDAY_AFTER) {
         draw_bitmap_move(&offset, &weekdays[s_weekday], height, color, date_word_spacing);
     }

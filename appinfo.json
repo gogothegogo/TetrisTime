@@ -49,9 +49,10 @@
     "shortName": "TetrisTime_mod",
     "targetPlatforms": [
         "aplite",
-        "basalt"
+        "basalt",
+        "chalk"
     ],
-    "uuid": "4ba45d28-f0b9-4e67-9ece-9ae46110be83",
+    "uuid": "10f5597c-fbca-4885-9387-d1bf594bf496",
     "versionLabel": "3.0",
     "watchapp": {
         "watchface": true
