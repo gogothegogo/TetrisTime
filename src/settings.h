@@ -2,7 +2,6 @@
 
 #define SETTINGS_VERSION_VALUE 2
 
-// I should've used a prefix =/
 typedef enum {
     VERSION = 0,
     LIGHT_THEME,
