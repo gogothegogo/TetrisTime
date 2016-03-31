@@ -496,7 +496,7 @@ static void tick_handler(struct tm* tick_time, TimeUnits units_changed) {
         digit_values[3] = tick_time->tm_min % 10;
         digit_values[4] = 10;
 
-        if (!clock24) {
+        if (true) { //gogo !clock24
             if (digit_values[0] == 0) {
                 digit_values[0] = DIGIT_COUNT;
 
