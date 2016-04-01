@@ -157,7 +157,7 @@ static void state_step(DigitState* state) {
 }
 
 static void draw_weekday_line(int height, GColor color) {
-  //here is date font switch gogo  
+  //date font switch gogo  
   const Bitmap* weekdays = s_settings[CRO_DATE_FONT] ? s_cro_weekdays : s_small_weekdays;
   //const Bitmap* weekdays = s_small_weekdays;
     const Bitmap* bmp = &weekdays[s_weekday];
@@ -496,7 +496,7 @@ static void tick_handler(struct tm* tick_time, TimeUnits units_changed) {
         digit_values[3] = tick_time->tm_min % 10;
         digit_values[4] = 10;
 
-        if (true) { //gogo !clock24
+   //     if (true) { //gogo !clock24
             if (digit_values[0] == 0) {
                 digit_values[0] = DIGIT_COUNT;
 
@@ -520,12 +520,43 @@ static void tick_handler(struct tm* tick_time, TimeUnits units_changed) {
                 digit_offsets[3] = 28;
                 digit_offsets[4] = 14;
             }
-        } else {
+  /*      } else {
             digit_offsets[0] = 2;
             digit_offsets[1] = 10;
             digit_offsets[2] = 20;
             digit_offsets[3] = 28;
             digit_offsets[4] = 15;
+        } */
+      //offset fix for digit 1, should be tinner gogo
+        if (digit_values[1]==1) {
+          digit_offsets[0]+=1;
+          digit_offsets[1]-=1;
+          digit_offsets[2]-=1;
+          digit_offsets[3]-=1;
+          digit_offsets[4]-=1;
+        }
+        
+        if (digit_values[2]==1) {
+          digit_offsets[0]+=1;
+          digit_offsets[1]+=1;
+          digit_offsets[2]-=1;
+          digit_offsets[3]-=1;
+          digit_offsets[4]+=1;
+        }
+      
+        if (digit_values[3]==1) {
+          digit_offsets[0]+=1;
+          digit_offsets[1]+=1;
+          digit_offsets[2]+=1;
+          digit_offsets[3]-=1;
+          digit_offsets[4]+=1;
+        }  
+        if (digit_values[0]==2) {
+          digit_offsets[0]+=1;
+          digit_offsets[1]+=1;
+          digit_offsets[2]+=1;
+          digit_offsets[3]+=1;
+          digit_offsets[4]+=1;
         }
     
         bool changed = false;
@@ -545,7 +576,7 @@ static void tick_handler(struct tm* tick_time, TimeUnits units_changed) {
         }
     }
 
-    if (units_changed & SECOND_UNIT) {
+    if (units_changed & SECOND_UNIT) { //seconds gogo
         if (s_settings[ANIMATE_SECOND_DOT]) {
             s_show_second_dot = tick_time->tm_sec % 2;
             s_second_draw_hack = !s_animating;
